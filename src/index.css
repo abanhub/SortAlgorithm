@@ -158,7 +158,97 @@ All colors MUST be HSL.
   .bar-compare {
     animation: pulse 0.5s ease-in-out;
   }
-}
+  
+  /* Enhanced glass effect */
+  .glass {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px) saturate(150%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Smooth scrollbar for panels */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* YouTube-style horizontal slider effects */
+  .youtube-slider-container {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .youtube-slider-container:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+  
+  .youtube-slider-reveal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .youtube-slider-container:hover .youtube-slider-reveal {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .youtube-slider-hide {
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .youtube-slider-container:hover .youtube-slider-hide {
+    opacity: 0;
+  }
+  
+  /* Compact slider styling */
+  .compact-slider {
+    height: 4px !important;
+  }
+  
+  .compact-slider [data-slider-track] {
+    height: 4px !important;
+  }
+  
+  .compact-slider [data-slider-range] {
+    height: 4px !important;
+  }
+  
+  .compact-slider [data-slider-thumb] {
+    width: 12px !important;
+    height: 12px !important;
+    border-width: 1px !important;
+  }
+
+  /* Enhanced Swap Animation Effects */
+  /* Simple pulse animation for swapping elements */
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  }
+
 
 @keyframes swap {
   0%, 100% {
